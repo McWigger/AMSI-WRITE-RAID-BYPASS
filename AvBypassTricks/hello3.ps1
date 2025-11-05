@@ -1,4 +1,4 @@
-function cool {
+function Cool {
     :initialloop for($j = $InitialStart; $j -lt $MaxOffset; $j += $NegativeOffset){
         [IntPtr] $MethodPointerToSearch = [Int64] $MethodPointer - $j
         $ReadedMemoryArray = [byte[]]::new($ReadBytes)
